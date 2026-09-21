@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+
+</head>
+<body>
+    
+    <script>
+        localStorage.setItem("name", "Rushikesh Borgaonkar");
+        const name = localStorage.getItem("name");
+        console.log("name from localstorage : ", name);
+        // localStorage.removeItem("name");
+        console.log("After remove : ", localStorage.getItem("name"));        
+        console.log("localstorage length = ", localStorage.length);
+        localStorage.clear();
+        console.log("localstorage length = ", localStorage.length);
+
+    </script>
+</body>
+</html>

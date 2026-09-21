@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session Storage</title>
+
+</head>
+<body>
+    <script>
+    sessionStorage.setItem("name", "Narayan Suryawanshi");
+    const name = sessionStorage.getItem("name");
+    console.log("Name from sessionStorage: ", name);
+     sessionStorage.removeItem("name");
+    console.log("After remove: ", sessionStorage.getItem("name"));
+    console.log(sessionStorage.length);
+     sessionStorage.clear();
+    console.log(sessionStorage.length);
+    </script>
+    <script>
+    localStorage.setItem("name", "Narayan R Suryawanshi");
+    const names = localStorage.getItem("name");
+    console.log("Name from localStorage: ", names);
+    localStorage.removeItem("name");
+    console.log("After remove: ", localStorage.getItem("name"));
+    console.log(localStorage.length);
+    localStorage.clear();
+    console.log(localStorage.length);
+    </script>
+</body>
+</html>

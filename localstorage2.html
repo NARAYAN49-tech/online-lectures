@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalStorage</title>
+</head>
+<body>
+    <input type="text" id="input" placeholder="enter text">
+    <button onclick="saveData()">Save</button>
+    <button onclick="loadData()">Load</button>
+
+    <p id="output">
+
+    </p>
+
+    <script>
+        function saveData() {
+            const input = document.getElementById("input").value;
+            console.log("saving input: ", input);
+            localStorage.setItem("data", input);
+        }
+        function loadData() {
+            const data = localStorage.getItem("data");
+            document.getElementById("output").innerText = data || "No data found!";
+        }
+    </script>
+
+</body>
+</html>
+. Geolocation API
+The Geolocation API allows a website to request the user's geographical location.
+Common uses:
+•	Show current location on a map 
+•	Find nearby restaurants 
+•	Delivery tracking 
+•	Weather based on location 
+•	Location-based services 
+
+
+Your Website
+     ↓
+navigator.geolocation
+     ↓
+Browser (Chrome/Edge)
+     ↓
+Windows Location Services
+     ↓
+Wi-Fi / IP address / nearby networks
+     ↓
+Approximate Latitude + Longitude
+
+
+2. Web Storage API
+Web Storage allows JavaScript to store data in the browser.
+There are two main types:
+Storage	Lifetime	Sent to server automatically?
+localStorage	Until manually deleted	No
+sessionStorage	Until tab/session ends	No
+________________________________________
+2.1 localStorage
+localStorage stores data that remains available after closing and reopening the browser.
+Store
+localStorage.setItem("username", "Sandip");
+Read
+const name = localStorage.getItem("username");
+
+console.log(name);
+Output:
+Sandip
+Remove one item
+localStorage.removeItem("username");
+Remove everything
+localStorage.clear();
+Example
+localStorage.setItem("theme", "dark");
+
+const theme = localStorage.getItem("theme");
+
+console.log(theme);
+Real-world examples:
+•	Theme preference 
+•	Language preference 
+•	Simple client-side settings 
+•	Shopping-cart data for some applications 
+Don't store sensitive secrets such as passwords or long-lived authentication secrets in localStorage.

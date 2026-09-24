@@ -1,0 +1,25 @@
+div {
+    height: 200px;
+    width: 300px;
+    border: 2px solid black;
+    color: orange;
+}
+
+.main-div {
+    background-color: blueviolet;
+}
+
+#language {
+    color: yellow;
+}
+ /*  Universal Selector */
+/* * {
+    background-color: blue;
+} */
+
+h1, h2, p {
+    color: red;
+}
+div p {
+    color: aqua;
+}
